@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="week_button_size">45dp</dimen>
+    <dimen name = "week_button_padding">1dp</dimen>
+</resources>

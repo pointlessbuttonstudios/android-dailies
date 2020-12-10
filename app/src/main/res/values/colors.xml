@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default theme -->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryAccent">#D81B60</color>
+
+    <!-- blue theme -->
+    <color name="bluePrimary">#1E88E5</color>
+    <color name="blueDark">#0D47A1</color>
+    <color name="blueAccent">#1A237E</color>
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+</resources>

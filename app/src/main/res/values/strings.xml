@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Dailies</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_home">My Dailies</string>
+    <string name="daily_title">Title</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="title_dailysetup">Add Daily</string>
+    <string name="title_edit_daily">Edit Daily</string>
+    <string name="done">Done</string>
+    <string name="delete_all_dailies">Delete all dailies</string>
+    <string name="reset_daily">Reset daily</string>
+    <string name="reset_days">Reset days</string>
+    <string name="reset_times">Reset times</string>
+    <string name="no_reminder_times_set">No reminder times set</string>
+    <string name="pick_a_time">Pick a time</string>
+    <string name="pick_an_interval">Pick an Interval</string>
+    <string name="delete_a_time">Delete a time</string>
+    <string name="add_your_first_daily">Add your first daily :)</string>
+    <string name="always_show_daily_descriptions">Always show daily descriptions</string>
+    <string name="version">Version 1.0</string>
+    <string name="intervalone">One Hour Interval</string>
+    <string name="intervalonedesc">Occurs hourly</string>
+    <string name="intervalthree">Three Hour Interval</string>
+    <string name="intervalthreedesc">Occurs once every 3 hours(quarter day)</string>
+    <string name="intervalsix">Six Hour Interval</string>
+    <string name="intervalsizdesc">Occurs once every 6 hours(half day)</string>
+</resources>

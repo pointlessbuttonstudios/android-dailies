@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <CheckBox
+        android:padding="8dp"
+        android:id="@+id/delete_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_weight="3"
+        android:id="@+id/middle_part_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/interval_list_item_title"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Hour Intervals"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/interval_list_item_desc"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Occurs once every 3 hours (quarter day)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        <TextView
+            android:id="@+id/time_list_item_time"
+            android:visibility="visible"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 PM"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    </LinearLayout>
+    <Switch
+        android:padding="8dp"
+        android:id="@+id/time_list_item_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>

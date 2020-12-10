@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title=""
+        android:id="@+id/add_daily"
+        android:icon="@drawable/ic_action_done"
+        app:showAsAction="always"/>
+
+    <item
+        android:title=""
+        android:id="@+id/select_all_times"
+        android:icon="@drawable/ic_action_delete_all"
+        app:showAsAction="always"
+        android:visible="false" />
+    <item
+        android:title=""
+        android:id="@+id/delete_times"
+        android:icon="@drawable/ic_action_delete_times"
+        app:showAsAction="always"
+        android:visible="false" />
+    <item
+        android:title=""
+        android:id="@+id/more_daily_settings"
+        android:icon="@drawable/ic_action_more_settings"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:title="@string/reset_daily"
+                android:id="@+id/clear_daily"/>
+            <item
+                android:title="@string/reset_days"
+                android:id="@+id/reset_days"/>
+            <!--<item
+                android:title="@string/reset_times"
+                android:id="@+id/reset_times"/>-->
+            <!--
+            <item
+                android:title="@string/delete_a_time"
+                android:id="@+id/delete_a_time"/>-->
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/daily_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/title_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Name your daily"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/choose_day_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Choose a day"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="When does this daily happen?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_edittext" />
+
+    <Button
+        android:id="@+id/choose_time_button"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="pickTimes"
+        android:text="@string/pick_a_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/choose_interval_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_holder" />
+
+    <Button
+        android:id="@+id/choose_interval_button"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="pickIntervals"
+        android:text="@string/pick_an_interval"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toEndOf="@+id/choose_time_button"
+        app:layout_constraintTop_toBottomOf="@+id/button_holder" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/desc_edittext"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Describe your daily"
+        android:inputType="textShortMessage|textMultiLine|text"
+        android:maxLength="200"
+        android:maxLines="4"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <RelativeLayout
+        android:id="@+id/button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_day_textview">
+
+        <Button
+            android:id="@+id/monButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="M" />
+
+        <Button
+            android:id="@+id/tueButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/monButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/wedButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/tueButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="W" />
+
+        <Button
+            android:id="@+id/thurButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/wedButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/friButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/thurButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="F" />
+
+        <Button
+            android:id="@+id/satButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/friButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/sunButton"
+            android:layout_width="@dimen/week_button_size"
+            android:layout_height="@dimen/week_button_size"
+            android:layout_margin="@dimen/week_button_padding"
+            android:layout_toRightOf="@+id/satButton"
+            android:background="@drawable/weekday_unselected"
+            android:onClick="onButtonPressed"
+            android:text="S" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/times_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_time_button"
+        tools:layout_editor_absoluteX="83dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/no_reminder_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/no_reminder_times_set"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_time_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="129dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
